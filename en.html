@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AltsCodex Partnership · A Software Ecosystem Where Accounts Can Be Transferred</title>
+<meta name="description" content="Looking for co-founding partners to build a new distribution ecosystem, beside the big-tech stores, where accounts can be transferred.">
+<meta property="og:title" content="A software ecosystem where accounts can be transferred. Build it with us.">
+<meta property="og:description" content="AltsCodex partnership: looking for digital asset trading platforms, game and app developers, AI builders and distribution partners.">
+<link rel="alternate" hreflang="ko" href="https://banstorm.github.io/altscodex-partners/">
+<link rel="alternate" hreflang="en" href="https://banstorm.github.io/altscodex-partners/en.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<meta name="theme-color" content="#050510">
+<style>
+  :root {
+    /* AltsCodex 디자인 토큰 (webxcom/design_tokens.css 기준) */
+    --surface-base: #050510;
+    --surface-1: #080810;
+    --surface-2: #0F0F1A;
+    --surface-3: #1A1A2A;
+    --neon-primary: #00FFE0;
+    --neon-08: rgba(0,255,224,.08);
+    --neon-15: rgba(0,255,224,.15);
+    --neon-30: rgba(0,255,224,.30);
+    --neon-60: rgba(0,255,224,.60);
+    --gold: #FFD700;
+    --gold-15: rgba(255,215,0,.15);
+    --gold-30: rgba(255,215,0,.30);
+    --text-primary: #E8E8F0;
+    --text-secondary: #9999B5;
+    --text-tertiary: #6A6A88;
+    --text-on-primary: #0A0A0A;
+    --border-default: rgba(0,255,224,.15);
+    --border-divider: rgba(255,255,255,.06);
+    --glow-subtle: 0 0 0 1px var(--neon-30), 0 0 8px var(--neon-15);
+    --glow-normal: 0 0 0 1px var(--neon-primary), 0 0 12px var(--neon-30);
+    --glow-gold: 0 0 8px var(--gold-30), 0 0 16px var(--gold-15);
+    --radius-sm: 2px; --radius-md: 4px; --radius-lg: 8px;
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --font-display: 'Audiowide', 'Neo둥근모 Pro', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+    --font-sans: 'Space Grotesk', 'Pretendard', 'Malgun Gothic', 'Apple SD Gothic Neo', system-ui, sans-serif;
+  }
+  @font-face {
+    font-family: 'Neo둥근모 Pro'; font-style: normal; font-weight: 400; font-display: swap;
+    src: url('https://cdn.jsdelivr.net/gh/neodgm/neodgm-webfont@latest/neodgm/neodgm.woff2') format('woff2');
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+  body {
+    margin: 0; background: var(--surface-base); color: var(--text-primary);
+    font-family: var(--font-sans); font-size: 17px; line-height: 1.75;
+    -webkit-font-smoothing: antialiased; word-break: keep-all; overflow-x: hidden;
+  }
+  body::before { /* 은은한 격자: 플랫폼의 사이버 톤 */
+    content: ""; position: fixed; inset: 0; pointer-events: none; z-index: -1;
+    background-image: linear-gradient(var(--border-divider) 1px, transparent 1px), linear-gradient(90deg, var(--border-divider) 1px, transparent 1px);
+    background-size: 48px 48px; mask-image: radial-gradient(ellipse at 50% 0%, #000 0%, transparent 70%);
+  }
+  a { color: var(--neon-primary); text-underline-offset: 3px; text-decoration-color: var(--neon-30); }
+  a:hover { text-decoration-color: var(--neon-primary); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--neon-primary); outline-offset: 3px; border-radius: var(--radius-sm); }
+  img { max-width: 100%; height: auto; display: block; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  strong { color: #fff; font-weight: 600; }
+
+  header.top { padding: 18px 0; border-bottom: 1px solid var(--border-divider); position: sticky; top: 0; z-index: 10; background: rgba(5,5,16,.82); backdrop-filter: blur(10px); }
+  header.top .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  .brand img { height: 36px; width: auto; }
+  nav.top-links { display: flex; gap: 22px; font-size: 15px; margin-left: auto; margin-right: 8px; }
+  nav.top-links a { color: var(--text-secondary); text-decoration: none; }
+  nav.top-links a:hover { color: var(--neon-primary); }
+
+  .lang { display: flex; gap: 6px; flex-shrink: 0; }
+  .lang a { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border: 1px solid var(--border-divider); border-radius: var(--radius-md); font-size: 13.5px; color: var(--text-secondary); text-decoration: none; }
+  .lang a:hover { border-color: var(--neon-30); color: var(--text-primary); }
+  .lang a[aria-current="page"] { border-color: var(--neon-primary); color: var(--neon-primary); background: var(--neon-08); }
+  .lang img { width: 20px; height: 14px; border-radius: 2px; object-fit: cover; }
+  html[lang="en"] .seal { font-size: 11.5px; }
+  html[lang="en"] body { word-break: normal; }
+  h1, h2, h3.display { font-family: var(--font-display); font-weight: 400; letter-spacing: 0; }
+
+  .hero { padding: 72px 0 96px; }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
+  .hero h1 { font-size: clamp(34px, 4.8vw, 56px); line-height: 1.3; margin: 0 0 24px; color: #fff; }
+  .hero h1 .line2 { color: var(--neon-primary); text-shadow: 0 0 18px var(--neon-30); }
+  .hero p.lead { font-size: 19px; color: var(--text-secondary); max-width: 34em; margin: 0 0 32px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-block; padding: 13px 22px; border-radius: var(--radius-md); font-weight: 600; font-size: 16px;
+    text-decoration: none; border: 1px solid var(--neon-30); transition: box-shadow 200ms var(--ease-out), background 200ms var(--ease-out);
+  }
+  .btn.primary { background: var(--neon-primary); color: var(--text-on-primary); border-color: var(--neon-primary); }
+  .btn.primary:hover { box-shadow: var(--glow-normal); }
+  .btn.ghost { color: var(--text-primary); background: var(--neon-08); }
+  .btn.ghost:hover { box-shadow: var(--glow-subtle); }
+
+  .hero-visual { position: relative; padding-top: 40px; }
+  .hero-visual .mascot { position: absolute; right: -10px; top: -46px; width: 190px; z-index: 3; filter: drop-shadow(0 12px 24px rgba(0,0,0,.6)); }
+  .deed {
+    position: relative; background: var(--surface-1); border: 1px solid var(--border-default);
+    border-radius: var(--radius-md); padding: 28px 28px 30px; box-shadow: var(--glow-subtle), 0 24px 48px -24px rgba(0,0,0,.8);
+  }
+  .deed h2 { font-size: 20px; margin: 0 0 4px; color: #fff; }
+  .deed .sub { font-size: 13.5px; color: var(--text-secondary); margin: 0 0 20px; max-width: 18em; }
+  .deed table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+  .deed th { text-align: left; font-weight: 500; color: var(--text-tertiary); font-size: 13px; padding: 0 0 8px; border-bottom: 1px solid var(--neon-30); }
+  .deed td { padding: 12px 0; border-bottom: 1px solid var(--border-divider); vertical-align: top; color: var(--text-secondary); }
+  .deed td:first-child { width: 6em; color: var(--text-tertiary); }
+  .deed tr.moved td { color: var(--neon-primary); font-weight: 600; }
+  .deed .chainline { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--neon-primary); box-shadow: 0 0 6px var(--neon-60); margin-right: 8px; vertical-align: 1px; }
+  .seal {
+    position: absolute; left: -22px; bottom: -26px; width: 92px; height: 92px; border-radius: 50%;
+    border: 2px solid var(--gold); color: var(--gold); display: grid; place-items: center; text-align: center;
+    font-family: var(--font-display); font-size: 15px; line-height: 1.3; background: rgba(5,5,16,.9);
+    box-shadow: var(--glow-gold); transform: rotate(-12deg); opacity: .95; z-index: 2;
+    animation: stamp .5s cubic-bezier(.2,1.6,.4,1) .9s both;
+  }
+  .seal::before { content: ""; position: absolute; inset: 5px; border: 1px solid var(--gold-30); border-radius: 50%; }
+  @keyframes stamp { from { opacity: 0; transform: rotate(-12deg) scale(1.6); } to { opacity: .95; transform: rotate(-12deg) scale(1); } }
+
+  section.block { padding: 88px 0; border-top: 1px solid var(--border-divider); }
+  section.block h2 { font-size: clamp(25px, 3vw, 34px); line-height: 1.4; margin: 0 0 16px; max-width: 24em; color: #fff; }
+  section.block p.intro { color: var(--text-secondary); max-width: 40em; margin: 0 0 36px; }
+  .measure { max-width: 46em; color: var(--text-secondary); }
+
+  .banner { margin: 0 0 40px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-default); position: relative; }
+  .banner img { width: 100%; aspect-ratio: 16/6; object-fit: cover; }
+  .banner figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 24px 16px; font-size: 14px; color: var(--text-secondary); background: linear-gradient(transparent, rgba(5,5,16,.92)); }
+
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-bottom: 40px; }
+  .split img { border-radius: var(--radius-md); border: 1px solid var(--border-default); }
+
+  table.data { width: 100%; border-collapse: collapse; background: var(--surface-1); border: 1px solid var(--border-default); border-radius: var(--radius-md); font-size: 15.5px; }
+  table.data th, table.data td { padding: 15px 18px; text-align: left; border-bottom: 1px solid var(--border-divider); vertical-align: top; }
+  table.data thead th { font-weight: 500; font-size: 13.5px; color: var(--text-tertiary); background: var(--surface-2); }
+  table.data td { color: var(--text-secondary); }
+  table.data td.num { color: var(--neon-primary); font-weight: 600; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  table.data tbody tr:last-child td { border-bottom: 0; }
+  table.data tbody tr:hover td { background: var(--neon-08); }
+  .table-scroll { overflow-x: auto; }
+  sup a { text-decoration: none; font-size: 11px; color: var(--text-tertiary); }
+  .compare td:nth-child(2) { color: var(--text-tertiary); }
+  .compare td:nth-child(3) { color: var(--text-primary); font-weight: 500; }
+  .compare td:first-child { color: var(--text-secondary); }
+
+  .sub-h { font-size: clamp(20px, 2.2vw, 24px); margin: 64px 0 20px; color: #fff; line-height: 1.45; }
+  .movement td:first-child { width: 8em; color: var(--gold); white-space: nowrap; }
+  .callout { margin: 32px 0 0; padding: 20px 24px; border-left: 2px solid var(--gold); background: linear-gradient(90deg, var(--gold-15), transparent 70%); max-width: 46em; border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+  .callout p { margin: 0; color: var(--text-primary); }
+  .callout strong { color: var(--gold); }
+
+  .creed { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; border-top: 1px solid var(--border-divider); }
+  .tenet { padding: 28px 28px 28px 0; border-bottom: 1px solid var(--border-divider); }
+  .tenet:nth-child(odd) { padding-right: 40px; border-right: 1px solid var(--border-divider); }
+  .tenet:nth-child(even) { padding-left: 40px; }
+  .tenet h3 { font-family: var(--font-display); font-weight: 400; font-size: 21px; margin: 0 0 10px; color: var(--neon-primary); }
+  .tenet p { margin: 0; color: var(--text-secondary); }
+  .partners { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .partner { padding: 28px 26px; background: var(--surface-1); border: 1px solid var(--border-default); border-radius: var(--radius-md); transition: box-shadow 200ms var(--ease-out); }
+  .partner:hover { box-shadow: var(--glow-subtle); }
+  .partner-img { float: right; width: 128px; height: 128px; object-fit: contain; margin: -10px -8px 8px 16px; filter: drop-shadow(0 10px 18px rgba(0,0,0,.55)); }
+  .partner dl { clear: both; }
+  .partner h3 { font-family: var(--font-display); font-weight: 400; font-size: 19px; margin: 0 0 12px; color: #fff; }
+  .partner p { margin: 0 0 16px; color: var(--text-secondary); font-size: 15.5px; }
+  .partner dl { margin: 0; font-size: 15px; padding-top: 14px; border-top: 1px solid var(--border-divider); }
+  .partner dt { font-weight: 600; color: var(--gold); font-size: 13.5px; }
+  .partner dd { margin: 4px 0 0; color: var(--text-primary); }
+
+  ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 0; max-width: 46em; }
+  ol.steps li { counter-increment: s; position: relative; padding: 0 0 26px 58px; }
+  ol.steps li::before {
+    content: counter(s); position: absolute; left: 0; top: 0; width: 38px; height: 38px; border-radius: var(--radius-md);
+    border: 1px solid var(--neon-primary); color: var(--neon-primary); display: grid; place-items: center; font-family: var(--font-display); font-size: 15px; box-shadow: 0 0 10px var(--neon-15);
+  }
+  ol.steps li::after { content: ""; position: absolute; left: 18px; top: 44px; bottom: 6px; width: 1px; background: var(--neon-30); }
+  ol.steps li:last-child::after { display: none; }
+  ol.steps strong { display: block; font-size: 17px; }
+  ol.steps span { color: var(--text-secondary); font-size: 15.5px; }
+
+  .shots { display: grid; grid-template-columns: 1.4fr 1fr; grid-template-rows: auto auto; gap: 16px; margin: 0 0 40px; }
+  .shots figure { margin: 0; border: 1px solid var(--border-default); border-radius: var(--radius-md); overflow: hidden; background: var(--surface-1); }
+  .shots figure:first-child { grid-row: span 2; }
+  .shots img { width: 100%; height: 100%; min-height: 160px; object-fit: cover; object-position: top left; }
+  .shots figcaption { padding: 10px 14px; font-size: 13.5px; color: var(--text-secondary); border-top: 1px solid var(--border-divider); }
+
+  .apps { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+  .app { background: var(--surface-1); border: 1px solid var(--border-default); border-radius: var(--radius-md); padding: 20px; display: flex; flex-direction: column; transition: box-shadow 200ms var(--ease-out); }
+  .app:hover { box-shadow: var(--glow-subtle); }
+  .app-icon { width: 56px; height: 56px; border-radius: var(--radius-lg); object-fit: cover; margin: 0 0 14px; border: 1px solid var(--border-default); background: var(--surface-3); }
+  .app h3 { margin: 0 0 2px; font-size: 17px; font-weight: 600; color: #fff; }
+  .app .kind { font-size: 13px; color: var(--gold); margin: 0 0 10px; }
+  .app p { margin: 0 0 14px; font-size: 15px; color: var(--text-secondary); flex: 1; }
+  .app a { font-size: 14.5px; font-weight: 500; }
+
+  .videos { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px 20px; margin-top: 8px; }
+  .video { background: transparent; }
+  /* TV 프레임: 썸네일이 잘리지 않도록 원본 프레임 가운데를 세로로 늘려 화면을 16:9로 만들었다 (1672x1086 중 화면 x126 y92 w1420 h799). */
+  .tv { position: relative; aspect-ratio: 1672 / 1086; }
+  .tv .screen { position: absolute; left: 7.54%; top: 8.47%; width: 84.93%; height: 73.57%; border-radius: 3% / 5%; overflow: hidden; background: var(--surface-3); }
+  .tv .frame { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 2; filter: drop-shadow(0 14px 22px rgba(0,0,0,.55)); }
+  .video button { display: block; width: 100%; height: 100%; border: 0; padding: 0; cursor: pointer; position: relative; background: var(--surface-3) center/cover no-repeat; }
+  .video button::after {
+    content: ""; position: absolute; right: 12px; bottom: 12px; width: 44px; height: 44px; border-radius: 50%;
+    background: var(--neon-primary) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 7l9 5-9 5z' fill='%230A0A0A'/%3E%3C/svg%3E") center/22px no-repeat;
+    box-shadow: var(--glow-normal); transition: transform 200ms var(--ease-out);
+  }
+  .video button:hover::after { transform: scale(1.08); }
+  .video .thumb { width: 100%; height: 100%; object-fit: contain; background: #000; }
+  .video iframe { display: block; width: 100%; height: 100%; border: 0; }
+  .video p { margin: 0; padding: 12px 4px 0; font-size: 15px; font-weight: 500; text-align: center; }
+
+  .dev { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .dev ul { margin: 0 0 24px; padding-left: 1.1em; color: var(--text-secondary); }
+  .dev li { margin-bottom: 8px; }
+  .dev li::marker { color: var(--neon-primary); }
+  .dev .robot { width: 260px; margin-top: 8px; }
+  .dev .links { background: var(--surface-1); border: 1px solid var(--border-default); border-radius: var(--radius-md); padding: 8px 22px; }
+  .dev .links a { display: block; padding: 13px 0; border-bottom: 1px solid var(--border-divider); text-decoration: none; color: var(--text-primary); }
+  .dev .links a:last-child { border-bottom: 0; }
+  .dev .links a:hover { color: var(--neon-primary); }
+  .dev .links small { display: block; color: var(--text-tertiary); font-size: 13.5px; }
+
+  .about { display: grid; grid-template-columns: 0.9fr 1.3fr; gap: 48px; align-items: center; }
+  .about img { border-radius: var(--radius-md); border: 1px solid var(--border-default); }
+  .about h3 { font-family: var(--font-display); font-weight: 400; font-size: 24px; margin: 0 0 2px; color: #fff; }
+  .about .role { color: var(--gold); margin: 0 0 16px; }
+  .about p { color: var(--text-secondary); }
+
+  footer { padding: 88px 0 96px; border-top: 1px solid var(--border-divider); background: radial-gradient(ellipse at 50% 0%, var(--neon-08), transparent 60%); }
+  footer .cta { display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; }
+  footer .cta img { width: 220px; }
+  footer h2 { font-size: clamp(26px, 3.2vw, 36px); margin: 0 0 12px; color: #fff; }
+  footer p { color: var(--text-secondary); max-width: 40em; margin: 0 0 28px; }
+  .sources { margin-top: 64px; font-size: 13px; color: var(--text-tertiary); }
+  .sources a { color: var(--text-secondary); }
+  .sources ol { padding-left: 1.2em; }
+
+  @media (max-width: 880px) {
+    .hero .wrap, .dev, .about, .split, footer .cta { grid-template-columns: 1fr; gap: 40px; }
+    .partners { grid-template-columns: 1fr; }
+    .creed { grid-template-columns: 1fr; }
+    .tenet, .tenet:nth-child(odd), .tenet:nth-child(even) { padding: 24px 0; border-right: 0; }
+    .partner-img { width: 96px; height: 96px; }
+    .shots { grid-template-columns: 1fr; }
+    .shots figure:first-child { grid-row: auto; }
+    nav.top-links { display: none; }
+    .hero { padding: 40px 0 72px; }
+    .hero-visual .mascot { width: 130px; top: -20px; right: 0; }
+    section.block { padding: 64px 0; }
+    table.data { font-size: 14.5px; }
+    table.data th, table.data td { padding: 12px; }
+    table.data td.num { white-space: normal; }
+    table.data td:first-child { min-width: 7.5em; }
+    footer .cta img { width: 160px; }
+    .banner img { aspect-ratio: 16/9; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#"><img src="assets/logo.png" alt="AltsCodex" width="108" height="36"></a>
+    <nav class="top-links" aria-label="Page navigation">
+      <a href="#philosophy">Philosophy</a>
+      <a href="#why">Why now</a>
+      <a href="#vision">Vision</a>
+      <a href="#partners">Partners</a>
+      <a href="#live">Live today</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="lang" aria-label="Language">
+      <a href="index.html" hreflang="ko" lang="ko"><img src="https://flagcdn.com/w40/kr.png" alt="" width="20" height="14">한국어</a>
+      <a href="en.html" hreflang="en" lang="en" aria-current="page"><img src="https://flagcdn.com/w40/us.png" alt="" width="20" height="14">English</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Apps keep pouring in,<br><span class="line2">yet accounts stay locked in.</span></h1>
+        <p class="lead">AltsCodex is building a software ecosystem where the ownership of an account you have grown can be transferred safely. We are looking for business partners to draw the big picture with us from day one: a new distribution ecosystem that stands alongside the big-tech stores.</p>
+        <div class="actions">
+          <a class="btn primary" href="#contact">Build it with us</a>
+          <a class="btn ghost" href="https://developers.altscodex.com" target="_blank" rel="noopener">Developer Center</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+      <img class="mascot" src="assets/robot-cube.png" alt="" width="190" height="143">
+      <figure class="deed" aria-label="Example account transfer record">
+        <h2>Account transfer record</h2>
+        <p class="sub">From creation to sub-accounts to a new owner</p>
+        <table>
+          <thead><tr><th scope="col">When</th><th scope="col">Record</th></tr></thead>
+          <tbody>
+            <tr><td>Created</td><td><span class="chainline" aria-hidden="true"></span>Account issued under the owner's verified identity</td></tr>
+            <tr><td>Grown</td><td><span class="chainline" aria-hidden="true"></span>Value builds up through play and purchases</td></tr>
+            <tr><td>Extended</td><td><span class="chainline" aria-hidden="true"></span>Sub-accounts added under the same identity</td></tr>
+            <tr class="moved"><td>Transfer</td><td><span class="chainline" aria-hidden="true"></span>Ownership moves to the new owner, the record is kept permanently</td></tr>
+          </tbody>
+        </table>
+        <div class="seal" aria-hidden="true">Transfer<br>Verified</div>
+      </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="philosophy">
+    <div class="wrap">
+      <h2>We are opening a new path beside the big-tech stores. We are looking for business partners who share this vision.</h2>
+      <p class="intro">Today a handful of big-tech companies guard the gates of app distribution, and every account and every dollar inside follows their rules. Beside them, we want to build a new path where users own their accounts and everyone who builds the ecosystem shares in it. No single company can build that path alone, so we want to build it from the start with partners who see the same picture.</p>
+      <div class="creed">
+        <div class="tenet">
+          <h3>Accounts belong to users</h3>
+          <p>An account a user has built with their time and money belongs to that user, not the platform. Its ownership should be transferable, it should be delegable, and its history should be on record.</p>
+        </div>
+        <div class="tenet">
+          <h3>Distribution is owned together</h3>
+          <p>Instead of one gatekeeper setting the fees, the participants who build the ecosystem set the rules and share the revenue.</p>
+        </div>
+        <div class="tenet">
+          <h3>Build together, share together</h3>
+          <p>Developers, trading platforms, builders and distribution partners set this ecosystem's first standards together and share in its growth as peers.</p>
+        </div>
+        <div class="tenet">
+          <h3>Start small, go big</h3>
+          <p>The goal is to stand alongside the big-tech stores. One game is enough to start down that path.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="why">
+    <div class="wrap">
+      <h2>Making apps got easy. Choosing them got hard.</h2>
+      <p class="intro">AI-made apps and games now exceed what existing distribution channels can filter. The volume has grown, but user attention has not kept up.</p>
+      <figure class="banner"><img src="assets/flood.jpg" alt="A person looking up at an endless wall of app and account cards" loading="lazy" width="1600" height="900"><figcaption>Thousands of new apps and games every day, and just as many new accounts</figcaption></figure>
+      <div class="table-scroll">
+        <table class="data">
+          <thead><tr><th scope="col">Metric</th><th scope="col">Figure</th></tr></thead>
+          <tbody>
+            <tr><td>Global app releases, Q1 2026 year over year<sup><a href="#s1">1</a></sup></td><td class="num">Apple + Google +60%, iOS +80%</td></tr>
+            <tr><td>New App Store apps, H1 2026<sup><a href="#s2">2</a></sup></td><td class="num">About 560,000</td></tr>
+            <tr><td>App Store review wait for new apps, March 2026<sup><a href="#s3">3</a></sup></td><td class="num">7 to 30+ days (normally 24–48 hours)</td></tr>
+            <tr><td>Games released on Steam<sup><a href="#s4">4</a></sup></td><td class="num">21,185 in 2025 → 27,286 by November 2026</td></tr>
+            <tr><td>New Steam games disclosing AI use, October 2026<sup><a href="#s5">5</a></sup></td><td class="num">49.9% (26.4% a year earlier)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout"><p>Existing stores are busy filtering the flood, and users don't know what to trust. What is becoming scarce is not apps but <strong>a distribution channel people can trust</strong>.</p></div>
+    </div>
+  </section>
+
+  <section class="block" id="vision">
+    <div class="wrap">
+      <h2>An ecosystem where what you buy is yours and the accounts you grow can be transferred</h2>
+      <div class="split">
+        <p class="intro" style="margin:0">On existing stores, everything users buy and build is locked to the platform. In the new ecosystem, developers allow account transfers from the start and take part in them. Users keep several sub-accounts under one verified identity and transfer the accounts they have grown, with a full record.</p>
+        <img src="assets/one-main-many-alts.jpg" alt="A screen where several sub-accounts branch out from one main account" loading="lazy" width="1400" height="788">
+      </div>
+      <div class="table-scroll">
+        <table class="data compare">
+          <thead><tr><th scope="col">Item</th><th scope="col">Existing app stores</th><th scope="col">Account-transfer ecosystem</th></tr></thead>
+          <tbody>
+            <tr><td>Account</td><td>Locked to the platform</td><td>Ownership can be transferred</td></tr>
+            <tr><td>Account trading</td><td>Violates the terms of service</td><td>Official transfers approved by the developer</td></tr>
+            <tr><td>Developer revenue</td><td>Only the first sale and in-app purchases</td><td>Additional revenue every time an account is transferred</td></tr>
+            <tr><td>Sub-accounts</td><td>A workaround or grounds for a ban</td><td>Official multi-accounts tied to a verified identity</td></tr>
+            <tr><td>Reclaim fraud</td><td>The trading broker covers the losses</td><td>Blocked by design through the transfer record</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="revenue">
+    <div class="wrap">
+      <h2>On legacy stores, accounts cannot be transferred by design.</h2>
+      <p class="intro">On today's stores, what users “buy” is a license that can be revoked at any time, and the accounts they grow can never leave the platform. This is not one policy. It is the structure.</p>
+      <div class="table-scroll">
+        <table class="data">
+          <thead><tr><th scope="col">Legacy distribution channel</th><th scope="col">2025 size</th></tr></thead>
+          <tbody>
+            <tr><td>All iOS and Google Play in-app purchases<sup><a href="#s6">6</a></sup></td><td class="num">About $167 billion</td></tr>
+            <tr><td>App Store game revenue<sup><a href="#s7">7</a></sup></td><td class="num">$52.5 billion</td></tr>
+            <tr><td>Google Play game revenue<sup><a href="#s7">7</a></sup></td><td class="num">$30 billion</td></tr>
+            <tr><td>Steam game revenue (estimate)<sup><a href="#s8">8</a></sup></td><td class="num">About $20 billion</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="measure" style="margin:20px 0 0">This entire market stands on accounts whose ownership cannot be transferred.</p>
+
+      <h3 class="display sub-h">Users are already asking: do I really own what I bought?</h3>
+      <div class="table-scroll">
+        <table class="data movement">
+          <thead><tr><th scope="col">When</th><th scope="col">What happened in North America and Europe</th></tr></thead>
+          <tbody>
+            <tr><td>May 2026</td><td>The California State Assembly passed the Protect Our Games Act (AB 1921) 43 to 16, one of the movement's biggest wins in North America so far. It returns for debate in the 2027 session.<sup><a href="#s11">11</a></sup></td></tr>
+            <tr><td>January 2026</td><td>Stop Killing Games submitted 1,294,188 verified signatures to the European Commission. The consumer movement was started in 2024 by US YouTuber Ross Scott.<sup><a href="#s10">10</a></sup></td></tr>
+            <tr><td>January 2025</td><td>California's AB 2426 took effect. Sellers of digital games must disclose that buyers get a revocable license, not a “purchase”.<sup><a href="#s9">9</a></sup></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout"><p>These movements ask for one thing: <strong>what users buy should belong to them</strong>. Legacy stores cannot fully answer that demand, because transferring account ownership was never part of their structure. AltsCodex is built on exactly that structure: accounts that transfer with a permanent record.</p></div>
+      <p class="measure" style="margin:28px 0 0">A different structure changes how value flows. Every time an account changes hands, its value stays inside the ecosystem instead of leaking out, and is shared by the participants who built this path together.</p>
+    </div>
+  </section>
+
+  <section class="block" id="partners">
+    <div class="wrap">
+      <h2>Who we want to build this with</h2>
+      <p class="intro">We propose a co-founding partnership: bringing together our users, technology, content and experience to set the ecosystem's first rules and shares together.</p>
+      <div class="partners">
+        <article class="partner">
+          <img class="partner-img" src="assets/partner-trade.png" alt="" width="128" height="128" loading="lazy">
+          <h3>Digital asset trading platforms</h3>
+          <p>Platforms whose users already know how to trade and transfer accounts and items, and who have earned trust brokering high-value deals.</p>
+          <dl>
+            <dt>What we build and share together</dt>
+            <dd>An official transfer market approved by developers, and a seat at the table setting the new standard for digital asset distribution</dd>
+          </dl>
+        </article>
+        <article class="partner">
+          <img class="partner-img" src="assets/partner-gamedev.png" alt="" width="128" height="128" loading="lazy">
+          <h3>Game and app developers</h3>
+          <p>Studios that want to open a world where accounts in their games transfer officially, and pioneer a new distribution path outside the big-tech markets.</p>
+          <dl>
+            <dt>What we build and share together</dt>
+            <dd>Ongoing revenue every time an account transfers, and games that grow with users who understand digital assets</dd>
+          </dl>
+        </article>
+        <article class="partner">
+          <img class="partner-img" src="assets/partner-builder.png" alt="" width="128" height="128" loading="lazy">
+          <h3>Independent AI game and app builders</h3>
+          <p>A new generation of creators who build games and apps fast with AI, and who will fill this ecosystem with its first content.</p>
+          <dl>
+            <dt>What we build and share together</dt>
+            <dd>A stage with accounts, multi-accounts and transfers built in, a launch path through AppyApe, and revenue shared every time an account transfers</dd>
+          </dl>
+        </article>
+        <article class="partner">
+          <img class="partner-img" src="assets/partner-community.png" alt="" width="128" height="128" loading="lazy">
+          <h3>Distribution and community partners</h3>
+          <p>Communities where gamers and users gather, publishers and curation channels.</p>
+          <dl>
+            <dt>What we build and share together</dt>
+            <dd>A role in setting the standard people can trust amid the flood of apps, and a founding seat in the new ecosystem</dd>
+          </dl>
+        </article>
+      </div>
+
+      <h2 style="margin-top:72px">How we take the first steps together</h2>
+      <ol class="steps">
+        <li><strong>Draw the picture together</strong><span>We share the future each of us sees and the strengths we bring, and find where this vision meets yours.</span></li>
+        <li><strong>Open the path with a first game</strong><span>We choose the first game that officially allows account transfers.</span></li>
+        <li><strong>Connect the transfer flow</strong><span>We launch on AppyApe and connect sign-up, sub-account creation and transfers through AltsCodex accounts.</span></li>
+        <li><strong>Grow it together</strong><span>We review the first game's transfers and user response together, then expand the ecosystem to the next games and partners.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block" id="live">
+    <div class="wrap">
+      <h2>The seeds of this ecosystem are already running.</h2>
+      <p class="intro">These services run on AltsCodex accounts today. Try them all at <a href="https://www.altscodex.com/apps" target="_blank" rel="noopener">altscodex.com/apps</a>.</p>
+      <div class="shots">
+        <figure><img src="assets/shot-apps.jpg" alt="AltsCodex connected app list" loading="lazy" width="1400" height="788"><figcaption>Connected app catalog</figcaption></figure>
+        <figure><img src="assets/shot-accounts.jpg" alt="My game accounts screen" loading="lazy" width="1400" height="700"><figcaption>Multi-account management per app</figcaption></figure>
+        <figure><img src="assets/shot-agents.jpg" alt="AI agent account management screen" loading="lazy" width="1400" height="788"><figcaption>AI agent accounts</figcaption></figure>
+      </div>
+      <div class="apps">
+        <article class="app">
+          <img class="app-icon" src="https://api.webxcom.com/uploads-app/ab780a0a-70fd-4703-b9a2-71c38fbf90a0.png" alt="" width="56" height="56" loading="lazy" onerror="this.remove()">
+          <h3>AppyApe</h3>
+          <p class="kind">Free independent app store</p>
+          <p>A free app store that connects developers and users, and the distribution gateway of the account-transfer ecosystem.</p>
+          <a href="https://appyape.com" target="_blank" rel="noopener">appyape.com</a>
+        </article>
+        <article class="app">
+          <img class="app-icon" src="https://api.webxcom.com/uploads-app/3f92fa4b-3e54-4f57-b524-9fab10ba7d65.png" alt="" width="56" height="56" loading="lazy" onerror="this.remove()">
+          <h3>BIT WAR</h3>
+          <p class="kind">Game · Account transfer</p>
+          <p>A shooter where your ship keeps growing when the account is transferred. Designed around transfers from the start.</p>
+          <a href="https://bitwar.webxpod.com" target="_blank" rel="noopener">bitwar.webxpod.com</a>
+        </article>
+        <article class="app">
+          <img class="app-icon" src="https://api.webxcom.com/uploads-app/be0137d8-450f-45c0-b731-5b06ea2d1e17.png" alt="" width="56" height="56" loading="lazy" onerror="this.remove()">
+          <h3>OPEN-MMO</h3>
+          <p class="kind">Game · Multi-account</p>
+          <p>A project testing agent accounts and the multi-account system.</p>
+          <a href="https://openmmo.webxpod.com" target="_blank" rel="noopener">openmmo.webxpod.com</a>
+        </article>
+        <article class="app">
+          <img class="app-icon" src="https://api.webxcom.com/uploads-app/d5f634ec-d5d2-4c9d-8137-53794805179a.png" alt="" width="56" height="56" loading="lazy" onerror="this.remove()">
+          <h3>AI-AliMall</h3>
+          <p class="kind">AI agent commerce</p>
+          <p>A shop where you find and buy products by chat. An agent places orders within the budget the user approves.</p>
+          <a href="https://alimall.appdot.asia" target="_blank" rel="noopener">alimall.appdot.asia</a>
+        </article>
+        <article class="app">
+          <img class="app-icon" src="https://api.webxcom.com/uploads-app/738e97f2-7285-462e-8a87-b66af77a3458.png" alt="" width="56" height="56" loading="lazy" onerror="this.remove()">
+          <h3>Elon's Mars</h3>
+          <p class="kind">Web game</p>
+          <p>A co-op game where players around the world build a colony on Mars together.</p>
+          <a href="https://mars.altscodex.com" target="_blank" rel="noopener">mars.altscodex.com</a>
+        </article>
+        <article class="app">
+          <img class="app-icon" src="https://api.webxcom.com/uploads-app/b4f9872f-00b8-4150-9bea-f28f10e19337.png" alt="" width="56" height="56" loading="lazy" onerror="this.remove()">
+          <h3>TOWN</h3>
+          <p class="kind">Map-based social</p>
+          <p>A social network where you build a home on the map and leave posts.</p>
+          <a href="https://town.webxpod.com" target="_blank" rel="noopener">town.webxpod.com</a>
+        </article>
+      </div>
+
+      <div id="video-area" hidden>
+        <h2 style="margin-top:72px">Watch</h2>
+        <p class="intro">See how multi-account creation and account transfers actually work.</p>
+        <div class="videos" id="videos"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="developers">
+    <div class="wrap dev">
+      <div>
+        <h2>The technology behind the ecosystem is open to all.</h2>
+        <p class="intro">A platform that treats OAuth accounts (slots) as on-chain assets. Each slot has an AA wallet, on-chain ownership and a usage history.</p>
+        <ul>
+          <li>SDKs for web, Node.js, Electron, Flutter, iOS and Android</li>
+          <li>OAuth with PKCE, so apps without a backend can use it too</li>
+          <li>Multi-account management and switching per app</li>
+          <li>Permanent ownership history, and escrow that freezes a slot during a trade</li>
+          <li>AA wallets with sponsored gas that keep their address after a key change</li>
+          <li>AI agent delegation</li>
+        </ul>
+        <img class="robot" src="assets/robot-dev.png" alt="" loading="lazy" width="640" height="480">
+      </div>
+      <div class="links">
+        <a href="https://developers.altscodex.com" target="_blank" rel="noopener">Developer Center<small>developers.altscodex.com</small></a>
+        <a href="https://developers.altscodex.com/regit_app" target="_blank" rel="noopener">Register an app<small>Start by creating an OAuth slot</small></a>
+        <a href="https://developers.altscodex.com/hierarchy_account" target="_blank" rel="noopener">Hierarchical account guide<small>How multi-accounts are structured</small></a>
+        <a href="https://developers.altscodex.com/slot_lease_guide" target="_blank" rel="noopener">Account (slot) lease guide<small>Leasing and transferring accounts</small></a>
+        <a href="https://developers.altscodex.com/agent_guide" target="_blank" rel="noopener">Agent delegation guide<small>Delegating permissions to AI agents</small></a>
+        <a href="https://developers.altscodex.com/api_doc" target="_blank" rel="noopener">API docs<small>All endpoints</small></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="about">
+    <div class="wrap about">
+      <img src="assets/banned-main.jpg" alt="A gamer holding his head in front of a banned-account screen" loading="lazy" width="1000" height="750">
+      <div>
+        <h3>Kyungwoon Cha (Tim)</h3>
+        <p class="role">Platform developer, AltsCodex</p>
+        <p>Working in game development, I saw account bans, reclaims and identity problems up close. That experience led me to start AltsCodex, which handles the whole account lifecycle in one place: creation, multi-accounts, delegation and transfer.</p>
+        <p>I have been turning ideas that large organizations rarely try into reality, quickly, and the services running today are the result. Now I want to build the organization that will lead this ecosystem, together with partners who share the vision.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="cta"><div>
+    <h2>Shall we open a new path beside the big-tech stores together?</h2>
+    <p>Trading platforms, developers, independent AI builders, distribution partners: everyone is welcome. Conversation comes before contracts. Let's spend 30 minutes sharing each other's picture and decide on our first step together. Reach me at <a href="mailto:cgman119@naver.com">cgman119@naver.com</a>.</p>
+    <div class="actions" id="contact-actions">
+      <a class="btn primary" href="mailto:cgman119@naver.com?subject=AltsCodex%20Partnership">Start a conversation by email</a>
+      <a class="btn ghost" href="https://x.com/ChagyeongU64191" target="_blank" rel="noopener">Message on X</a>
+      <a class="btn ghost" href="https://developers.altscodex.com/qa" target="_blank" rel="noopener">Developer Center Q&amp;A</a>
+    </div>
+    </div><img src="assets/robot-wave.png" alt="" loading="lazy" width="520" height="347"></div>
+
+    <div class="sources">
+      <p>Sources</p>
+      <ol>
+        <li id="s1"><a href="https://appstorereview.app/guides/app-store-review-queue-delays-2026" target="_blank" rel="noopener">AppStoreReview, citing Appfigures data</a></li>
+        <li id="s2"><a href="https://pbxscience.com/app-store-new-app-submissions-may-surpass-one-million-this-year-as-ai-fuels-a-wave-of-junk-apps/" target="_blank" rel="noopener">PBX Science, citing Sensor Tower data</a></li>
+        <li id="s3"><a href="https://thenextweb.com/news/vibe-coding-apple-app-store-surge-crackdown" target="_blank" rel="noopener">The Next Web</a></li>
+        <li id="s4"><a href="https://www.gamingonlinux.com/2026/11/steam-is-officially-drowning-in-game-releases/page=2" target="_blank" rel="noopener">GamingOnLinux</a></li>
+        <li id="s5"><a href="https://dexerto.com/gaming/almost-half-of-all-new-steam-games-use-ai-now-3423933" target="_blank" rel="noopener">Dexerto</a></li>
+        <li id="s6"><a href="https://sensortower.com/blog/state-of-mobile-2026?pubDate=20260122" target="_blank" rel="noopener">Sensor Tower, State of Mobile 2026</a></li>
+        <li id="s7"><a href="https://9to5mac.com/2026/02/25/app-store-gaming-revenue-hit-52-5b-in-2025-topping-google-play-and-steam-combined-report/" target="_blank" rel="noopener">9to5Mac, citing a Sensor Tower report</a></li>
+        <li id="s8"><a href="https://www.notebookcheck.net/Steam-reportedly-generated-11-1-billion-in-gross-revenue-in-the-first-half-of-2026-marking-its-highest-ever-half-year.1338824.0.html" target="_blank" rel="noopener">Notebookcheck, citing Alinea Analytics estimates</a></li>
+        <li id="s9"><a href="https://www.morganlewis.com/pubs/2024/10/california-becomes-first-state-to-pass-law-targeting-advertising-of-digital-media-licenses" target="_blank" rel="noopener">Morgan Lewis, California AB 2426</a></li>
+        <li id="s10"><a href="https://www.techspot.com/news/112802-stop-killing-games-lost-biggest-battle-despite-13.html" target="_blank" rel="noopener">TechSpot, Stop Killing Games European Citizens' Initiative</a></li>
+        <li id="s11"><a href="https://kotaku.com/stop-killing-games-bill-passes-california-assembly-scott-ross-2000700893" target="_blank" rel="noopener">Kotaku, California AB 1921 passes the Assembly</a> · <a href="https://tech-insider.org/stop-killing-games-california-bill-2026/" target="_blank" rel="noopener">Tech Insider, revisited in 2027</a></li>
+      </ol>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* 소개할 유튜브 영상: 링크를 아래 배열에 추가하면 '영상으로 보기' 섹션이 나타납니다.
+     예) { url: "https://www.youtube.com/watch?v=XXXXXXXXXXX", title: "멀티계정 만들기" } */
+  const VIDEOS = [
+    { url: "https://www.youtube.com/watch?v=5x3W7XC4RFY&t=612s", title: "Rethinking SSO accounts #2: accounts that can be transferred" },
+    { url: "https://www.youtube.com/watch?v=h6m6uULnLDw", title: "AltsCodex video 2" },
+    { url: "https://www.youtube.com/watch?v=j5pf2j3Yno8", title: "AltsCodex video 3" }
+  ];
+
+  function youtubeId(url) {
+    try {
+      const u = new URL(url);
+      if (u.hostname === "youtu.be") return u.pathname.slice(1);
+      if (u.searchParams.get("v")) return u.searchParams.get("v");
+      const m = u.pathname.match(/\/(embed|shorts|live)\/([^/?]+)/);
+      return m ? m[2] : null;
+    } catch (e) { return null; }
+  }
+
+  (function renderVideos() {
+    const list = VIDEOS.map(v => ({ ...v, id: youtubeId(v.url) })).filter(v => v.id);
+    if (!list.length) return;
+    const area = document.getElementById("video-area");
+    const box = document.getElementById("videos");
+    list.forEach(v => {
+      const card = document.createElement("article");
+      card.className = "video";
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.setAttribute("aria-label", v.title + " – play video");
+      // 썸네일이 잘리지 않도록 16:9 고화질(maxresdefault)을 쓰고, 없으면 기본 썸네일로 바꾼다.
+      const thumb = document.createElement("img");
+      thumb.className = "thumb";
+      thumb.alt = "";
+      thumb.loading = "lazy";
+      thumb.src = "https://i.ytimg.com/vi/" + v.id + "/maxresdefault.jpg";
+      thumb.addEventListener("load", () => { if (thumb.naturalWidth < 200) thumb.src = "https://i.ytimg.com/vi/" + v.id + "/hqdefault.jpg"; });
+      thumb.addEventListener("error", () => { thumb.src = "https://i.ytimg.com/vi/" + v.id + "/hqdefault.jpg"; }, { once: true });
+      btn.append(thumb);
+      btn.addEventListener("click", () => {
+        const f = document.createElement("iframe");
+        const start = (() => { try { return parseInt(new URL(v.url).searchParams.get("t"), 10) || 0; } catch (e) { return 0; } })();
+        f.src = "https://www.youtube-nocookie.com/embed/" + v.id + "?autoplay=1" + (start ? "&start=" + start : "");
+        f.title = v.title;
+        f.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";
+        f.allowFullscreen = true;
+        btn.replaceWith(f);
+      });
+      const tv = document.createElement("div");
+      tv.className = "tv";
+      const screen = document.createElement("div");
+      screen.className = "screen";
+      screen.append(btn);
+      const frame = document.createElement("img");
+      frame.className = "frame";
+      frame.src = "assets/tv-frame.png";
+      frame.alt = "";
+      tv.append(screen, frame);
+      const cap = document.createElement("p");
+      cap.textContent = v.title;
+      card.append(tv, cap);
+      box.append(card);
+    });
+    area.hidden = false;
+  })();
+</script>
+</body>
+</html>

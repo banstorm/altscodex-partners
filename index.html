@@ -7,6 +7,8 @@
 <meta name="description" content="빅테크 스토어 옆에 계정이 이관되는 새 유통 생태계를 함께 세울 공동 설립 파트너를 찾습니다.">
 <meta property="og:title" content="계정이 이관되는 소프트웨어 생태계, 함께 열어 보실 분을 찾습니다">
 <meta property="og:description" content="AltsCodex 협업 제안 — 디지털 자산 거래 플랫폼, 게임·앱 개발사, 유통 파트너를 찾습니다.">
+<link rel="alternate" hreflang="ko" href="https://banstorm.github.io/altscodex-partners/">
+<link rel="alternate" hreflang="en" href="https://banstorm.github.io/altscodex-partners/en.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
@@ -68,10 +70,17 @@
   header.top { padding: 18px 0; border-bottom: 1px solid var(--border-divider); position: sticky; top: 0; z-index: 10; background: rgba(5,5,16,.82); backdrop-filter: blur(10px); }
   header.top .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
   .brand img { height: 36px; width: auto; }
-  nav.top-links { display: flex; gap: 24px; font-size: 15px; }
+  nav.top-links { display: flex; gap: 22px; font-size: 15px; margin-left: auto; margin-right: 8px; }
   nav.top-links a { color: var(--text-secondary); text-decoration: none; }
   nav.top-links a:hover { color: var(--neon-primary); }
 
+  .lang { display: flex; gap: 6px; flex-shrink: 0; }
+  .lang a { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border: 1px solid var(--border-divider); border-radius: var(--radius-md); font-size: 13.5px; color: var(--text-secondary); text-decoration: none; }
+  .lang a:hover { border-color: var(--neon-30); color: var(--text-primary); }
+  .lang a[aria-current="page"] { border-color: var(--neon-primary); color: var(--neon-primary); background: var(--neon-08); }
+  .lang img { width: 20px; height: 14px; border-radius: 2px; object-fit: cover; }
+  html[lang="en"] .seal { font-size: 11.5px; }
+  html[lang="en"] body { word-break: normal; }
   h1, h2, h3.display { font-family: var(--font-display); font-weight: 400; letter-spacing: 0; }
 
   .hero { padding: 72px 0 96px; }
@@ -264,6 +273,10 @@
       <a href="#live">돌아가는 것들</a>
       <a href="#contact">연락하기</a>
     </nav>
+    <div class="lang" aria-label="언어 선택">
+      <a href="index.html" hreflang="ko" lang="ko" aria-current="page"><img src="https://flagcdn.com/w40/kr.png" alt="" width="20" height="14">한국어</a>
+      <a href="en.html" hreflang="en" lang="en"><img src="https://flagcdn.com/w40/us.png" alt="" width="20" height="14">English</a>
+    </div>
   </div>
 </header>
 
@@ -349,7 +362,7 @@
     <div class="wrap">
       <h2>구매한 것은 사용자의 것, 키운 계정은 이전할 수 있는 생태계</h2>
       <div class="split">
-        <p class="intro" style="margin:0">기존 스토어에서는 사용자가 산 것도, 키운 것도 플랫폼에 묶여 있습니다. 새 생태계에서는 개발사가 처음부터 계정 이관을 허용하고 함께 참여합니다. 하나의 본인 명의 계정 아래 여러 부계정을 두고, 키운 계정은 기록과 함께 넘깁니다.</p>
+        <p class="intro" style="margin:0">기존 스토어에서는 사용자가 산 것도, 키운 것도 플랫폼에 묶여 있습니다. 새 생태계에서는 개발사가 처음부터 계정 이관을 허용하고 함께 참여합니다. 하나의 본인 명의 계정 아래 여러 부계정을 두고, 키운 계정은 기록과 함께 이전합니다.</p>
         <img src="assets/one-main-many-alts.jpg" alt="하나의 메인 계정에서 여러 부계정이 뻗어 나가는 화면" loading="lazy" width="1400" height="788">
       </div>
       <div class="table-scroll">
