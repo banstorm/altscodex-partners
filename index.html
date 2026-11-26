@@ -145,6 +145,8 @@
   .partners { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .partner { padding: 28px 26px; background: var(--surface-1); border: 1px solid var(--border-default); border-radius: var(--radius-md); transition: box-shadow 200ms var(--ease-out); }
   .partner:hover { box-shadow: var(--glow-subtle); }
+  .partner-img { float: right; width: 128px; height: 128px; object-fit: contain; margin: -10px -8px 8px 16px; filter: drop-shadow(0 10px 18px rgba(0,0,0,.55)); }
+  .partner dl { clear: both; }
   .partner h3 { font-family: var(--font-display); font-weight: 400; font-size: 19px; margin: 0 0 12px; color: #fff; }
   .partner p { margin: 0 0 16px; color: var(--text-secondary); font-size: 15.5px; }
   .partner dl { margin: 0; font-size: 15px; padding-top: 14px; border-top: 1px solid var(--border-divider); }
@@ -217,6 +219,7 @@
   @media (max-width: 880px) {
     .hero .wrap, .dev, .about, .split, footer .cta { grid-template-columns: 1fr; gap: 40px; }
     .partners { grid-template-columns: 1fr; }
+    .partner-img { width: 96px; height: 96px; }
     .shots { grid-template-columns: 1fr; }
     .shots figure:first-child { grid-row: auto; }
     nav.top-links { display: none; }
@@ -359,6 +362,7 @@
       <p class="intro">완성된 계약을 들고 가는 대신, 작은 실험 하나로 시작해 함께 설계해 가는 제로베이스 협업을 제안합니다.</p>
       <div class="partners">
         <article class="partner">
+          <img class="partner-img" src="assets/partner-trade.png" alt="" width="128" height="128" loading="lazy">
           <h3>디지털 자산 거래 플랫폼</h3>
           <p>계정과 아이템을 사고팔고 넘겨 본 사용자, 고액 거래를 중개해 온 신뢰를 이미 가진 곳.</p>
           <dl>
@@ -367,6 +371,7 @@
           </dl>
         </article>
         <article class="partner">
+          <img class="partner-img" src="assets/partner-gamedev.png" alt="" width="128" height="128" loading="lazy">
           <h3>게임·앱 개발사</h3>
           <p>계정 이관을 공식으로 허용할 의향이 있고, 기존 앱마켓이 아닌 새 유통 채널이 필요한 곳.</p>
           <dl>
@@ -375,6 +380,7 @@
           </dl>
         </article>
         <article class="partner">
+          <img class="partner-img" src="assets/partner-builder.png" alt="" width="128" height="128" loading="lazy">
           <h3>개인 AI 게임·앱 빌더</h3>
           <p>AI로 게임과 앱을 혼자 빠르게 만들지만, 로그인·결제·계정 관리와 출시할 곳이 막막한 개인 개발자.</p>
           <dl>
@@ -383,6 +389,7 @@
           </dl>
         </article>
         <article class="partner">
+          <img class="partner-img" src="assets/partner-community.png" alt="" width="128" height="128" loading="lazy">
           <h3>유통·커뮤니티 파트너</h3>
           <p>게이머와 사용자가 모이는 커뮤니티, 퍼블리셔, 큐레이션 채널.</p>
           <dl>
