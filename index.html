@@ -429,9 +429,10 @@
 <footer id="contact">
   <div class="wrap">
     <h2>함께 열어 보시겠어요?</h2>
-    <p>거래 플랫폼, 개발사, 유통 파트너 누구든 좋습니다. 30분 정도의 대화로 서로의 문제를 듣고, 작게 해 볼 수 있는 실험을 함께 찾고 싶습니다.</p>
+    <p>거래 플랫폼, 개발사, 유통 파트너 누구든 좋습니다. 30분 정도의 대화로 서로의 문제를 듣고, 작게 해 볼 수 있는 실험을 함께 찾고 싶습니다. 연락은 <a href="mailto:cgman119@naver.com">cgman119@naver.com</a>으로 주세요.</p>
     <div class="actions" id="contact-actions">
-      <a class="btn primary" href="https://x.com/ChagyeongU64191" target="_blank" rel="noopener">X로 메시지 보내기</a>
+      <a class="btn primary" href="mailto:cgman119@naver.com?subject=AltsCodex%20%ED%98%91%EC%97%85%20%EB%AC%B8%EC%9D%98">이메일로 협업 문의하기</a>
+      <a class="btn ghost" href="https://x.com/ChagyeongU64191" target="_blank" rel="noopener">X로 메시지 보내기</a>
       <a class="btn ghost" href="https://developers.altscodex.com/qa" target="_blank" rel="noopener">개발자 센터 Q&amp;A</a>
     </div>
 
@@ -455,6 +456,9 @@
   /* 소개할 유튜브 영상: 링크를 아래 배열에 추가하면 '영상으로 보기' 섹션이 나타납니다.
      예) { url: "https://www.youtube.com/watch?v=XXXXXXXXXXX", title: "멀티계정 만들기" } */
   const VIDEOS = [
+    { url: "https://www.youtube.com/watch?v=5x3W7XC4RFY&t=612s", title: "SSO 계정의 재해석 #2 – 이전이 되는 계정" },
+    { url: "https://www.youtube.com/watch?v=h6m6uULnLDw", title: "AltsCodex 영상 2" },
+    { url: "https://www.youtube.com/watch?v=j5pf2j3Yno8", title: "AltsCodex 영상 3" }
   ];
 
   function youtubeId(url) {
@@ -481,7 +485,8 @@
       btn.style.backgroundImage = "url(https://i.ytimg.com/vi/" + v.id + "/hqdefault.jpg)";
       btn.addEventListener("click", () => {
         const f = document.createElement("iframe");
-        f.src = "https://www.youtube-nocookie.com/embed/" + v.id + "?autoplay=1";
+        const start = (() => { try { return parseInt(new URL(v.url).searchParams.get("t"), 10) || 0; } catch (e) { return 0; } })();
+        f.src = "https://www.youtube-nocookie.com/embed/" + v.id + "?autoplay=1" + (start ? "&start=" + start : "");
         f.title = v.title;
         f.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";
         f.allowFullscreen = true;
