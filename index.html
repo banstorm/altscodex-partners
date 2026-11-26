@@ -149,6 +149,9 @@
 
   .sub-h { font-size: clamp(20px, 2.2vw, 24px); margin: 64px 0 20px; color: #fff; line-height: 1.45; }
   .movement td:first-child { width: 8em; color: var(--gold); white-space: nowrap; }
+  .pain td:first-child { width: 9em; color: var(--text-primary); font-weight: 600; }
+  .pain td:nth-child(3) { color: var(--text-primary); }
+  .moat { margin-bottom: 8px; }
   .callout { margin: 32px 0 0; padding: 20px 24px; border-left: 2px solid var(--gold); background: linear-gradient(90deg, var(--gold-15), transparent 70%); max-width: 46em; border-radius: 0 var(--radius-md) var(--radius-md) 0; }
   .callout p { margin: 0; color: var(--text-primary); }
   .callout strong { color: var(--gold); }
@@ -269,6 +272,7 @@
       <a href="#philosophy">철학</a>
       <a href="#why">왜 지금인가</a>
       <a href="#vision">비전</a>
+      <a href="#edge">경쟁력</a>
       <a href="#partners">협업 대상</a>
       <a href="#live">돌아가는 것들</a>
       <a href="#contact">연락하기</a>
@@ -410,6 +414,45 @@
       </div>
       <div class="callout"><p>이 움직임들이 요구하는 것은 하나입니다. <strong>산 것은 사용자의 것이어야 한다</strong>는 것. 레거시 스토어는 이 요구에 온전히 답할 수 없습니다. 계정 소유권을 이전하는 기능이 처음부터 구조에 없기 때문입니다. AltsCodex는 바로 그 구조, 기록과 함께 계정이 이관되는 구조 위에 서 있습니다.</p></div>
       <p class="measure" style="margin:28px 0 0">구조가 다르면 가치의 흐름도 달라집니다. 계정이 주인을 바꿀 때마다 그 가치는 생태계 밖으로 새지 않고 생태계 안에 머물며, 이 길을 함께 세운 참여자들이 나눕니다.</p>
+    </div>
+  </section>
+
+  <section class="block" id="edge">
+    <div class="wrap">
+      <h2>레거시가 풀지 못한 문제를, AltsCodex는 구조로 풉니다.</h2>
+      <p class="intro">사용자, 개발사, 거래 플랫폼, 빌더가 오늘의 시장에서 겪는 문제는 서로 달라 보이지만 뿌리는 하나입니다. 계정이 플랫폼에 묶여 있다는 것. AltsCodex는 그 뿌리를 기술로 바꿉니다.</p>
+      <div class="table-scroll">
+        <table class="data pain">
+          <thead><tr><th scope="col">누구</th><th scope="col">레거시 시장의 문제</th><th scope="col">AltsCodex의 해법</th></tr></thead>
+          <tbody>
+            <tr><td>사용자</td><td>시간과 돈을 들여 키운 계정을 이전할 수 없고, 거래하더라도 원래 명의자가 되찾아 가는 회수 사기에 노출됩니다. 부계정은 편법이고, AI 에이전트에게는 비밀번호를 통째로 맡겨야 합니다.</td><td>계정 소유권이 이력과 함께 영구 기록되고, 거래 중에는 에스크로로 계정이 동결됩니다. 본인 명의 아래 공식 부계정을 두고, 에이전트에게는 비밀번호 대신 범위가 정해진 권한만 위임합니다.</td></tr>
+            <tr><td>게임·앱 개발사</td><td>높은 유통 수수료와 길어진 심사를 감수해도 노출은 보장되지 않습니다. 자기 게임의 계정이 밖에서 거래되어도 수익은 없고, 분쟁과 부계정 어뷰징 대응 비용만 남습니다.</td><td>계정 이관을 공식 기능으로 열어 이관마다 수익에 참여합니다. 본인 명의 기반 멀티계정으로 어뷰징을 구분하고, AppyApe를 통해 빅테크 심사 밖의 출시 경로를 얻습니다.</td></tr>
+            <tr><td>디지털 자산 거래 플랫폼</td><td>게임사 약관 밖에서 거래를 중개하다 보니 회수 사고 보상과 명의도용 리스크를 떠안습니다.</td><td>개발사가 허락한 공식 이관 매물을 다루고, 온체인 소유권 이력과 에스크로로 사고의 원인 자체를 줄입니다.</td></tr>
+            <tr><td>개인 AI 빌더</td><td>AI로 게임과 앱은 하루 만에 만들어도, 로그인과 결제와 계정 관리는 여전히 직접 만들어야 하고 출시는 심사에서 막힙니다.</td><td>SDK 하나로 계정, 멀티계정, 이관, 결제 정산이 붙고, 백엔드 없는 앱도 PKCE 방식으로 바로 연동합니다.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="display sub-h">왜 레거시는 쉽게 따라오지 못하는가</h3>
+      <div class="creed moat">
+        <div class="tenet">
+          <h3>잠금이 곧 수익 모델이다</h3>
+          <p>레거시 스토어의 수익은 계정과 구매를 플랫폼 안에 묶어 두는 데서 나옵니다. 계정 이전을 여는 순간 자신의 통제력과 수수료 구조를 스스로 흔들게 됩니다.</p>
+        </div>
+        <div class="tenet">
+          <h3>설계부터 다르다</h3>
+          <p>기존 계정 시스템은 한 사람, 한 계정, 이전 불가를 전제로 만들어졌습니다. AltsCodex는 처음부터 계층 계정, 소유권 이력, 에스크로, 위임을 전제로 설계했습니다. 기능 하나를 덧붙여서는 같아질 수 없습니다.</p>
+        </div>
+        <div class="tenet">
+          <h3>시대가 요구하는 방향에 서 있다</h3>
+          <p>디지털 소유권을 둘러싼 법과 여론은 사용자의 권리를 넓히는 쪽으로 움직이고 있습니다. 레거시는 그 흐름을 방어해야 하고, AltsCodex는 그 흐름 위에서 출발합니다.</p>
+        </div>
+        <div class="tenet">
+          <h3>AI 시대의 계정을 준비했다</h3>
+          <p>앱과 에이전트가 폭발적으로 늘어날수록 계정은 더 많이 만들어지고, 위임되고, 옮겨 다닙니다. 그 모든 순간을 다루는 계정 생애주기를 이미 갖추고 있습니다.</p>
+        </div>
+      </div>
+      <div class="callout"><p>우리는 레거시 스토어와 같은 게임을 하지 않습니다. 더 많은 앱을 진열하는 경쟁이 아니라, <strong>계정을 중심에 둔 다른 판</strong>에서 겨룹니다. 그 판의 규칙을 처음 쓰는 쪽이 다음 유통의 주인이 됩니다.</p></div>
     </div>
   </section>
 
