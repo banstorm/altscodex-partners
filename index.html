@@ -138,6 +138,8 @@
   .compare td:nth-child(3) { color: var(--text-primary); font-weight: 500; }
   .compare td:first-child { color: var(--text-secondary); }
 
+  .sub-h { font-size: clamp(20px, 2.2vw, 24px); margin: 64px 0 20px; color: #fff; line-height: 1.45; }
+  .movement td:first-child { width: 8em; color: var(--gold); white-space: nowrap; }
   .callout { margin: 32px 0 0; padding: 20px 24px; border-left: 2px solid var(--gold); background: linear-gradient(90deg, var(--gold-15), transparent 70%); max-width: 46em; border-radius: 0 var(--radius-md) var(--radius-md) 0; }
   .callout p { margin: 0; color: var(--text-primary); }
   .callout strong { color: var(--gold); }
@@ -367,11 +369,11 @@
 
   <section class="block" id="revenue">
     <div class="wrap">
-      <h2>유통 채널을 쥔 쪽이 가장 큰 돈을 법니다.</h2>
-      <p class="intro">그런데 지금의 스토어는 처음 팔릴 때만 돈을 벌고, 계정이 넘어가는 2차 시장에서는 아무도 공식적으로 돈을 벌지 못합니다.</p>
+      <h2>레거시 스토어에서 계정은 넘길 수 없게 설계되어 있습니다.</h2>
+      <p class="intro">오늘의 스토어에서 사용자가 “산” 것은 언제든 회수될 수 있는 이용권이고, 키운 계정은 플랫폼 밖으로 한 발짝도 나갈 수 없습니다. 이것은 정책 하나의 문제가 아니라 구조의 문제입니다.</p>
       <div class="table-scroll">
         <table class="data">
-          <thead><tr><th scope="col">유통 채널</th><th scope="col">2025년 규모</th></tr></thead>
+          <thead><tr><th scope="col">레거시 유통 채널</th><th scope="col">2025년 규모</th></tr></thead>
           <tbody>
             <tr><td>iOS·구글 플레이 인앱 결제 전체<sup><a href="#s6">6</a></sup></td><td class="num">약 1,670억 달러</td></tr>
             <tr><td>App Store 게임 매출<sup><a href="#s7">7</a></sup></td><td class="num">525억 달러</td></tr>
@@ -380,19 +382,21 @@
           </tbody>
         </table>
       </div>
-      <p class="measure" style="margin:32px 0 24px">계정이 이관되는 생태계는 이 길을 한 번 더 길게 만듭니다. 계정의 생애주기 내내 수익이 생깁니다.</p>
+      <p class="measure" style="margin:20px 0 0">이 거대한 시장 전체가, 사용자가 넘길 수 없는 계정 위에 서 있습니다.</p>
+
+      <h3 class="display sub-h">사용자들은 이미 묻고 있습니다. 내가 산 것은 정말 내 것인가.</h3>
       <div class="table-scroll">
-        <table class="data compare">
-          <thead><tr><th scope="col">계정의 순간</th><th scope="col">기존 스토어</th><th scope="col">계정 이관 생태계</th></tr></thead>
+        <table class="data movement">
+          <thead><tr><th scope="col">시점</th><th scope="col">북미와 유럽에서 일어난 일</th></tr></thead>
           <tbody>
-            <tr><td>출시와 첫 결제</td><td>유통 수수료</td><td>유통 수수료</td></tr>
-            <tr><td>부계정 만들기</td><td>수익 없음 (편법 취급)</td><td>공식 멀티계정 상품</td></tr>
-            <tr><td>다른 사람에게 넘기기</td><td>수익 없음 (약관 위반)</td><td>이관 수수료, 개발사와 나눔</td></tr>
-            <tr><td>새 주인의 결제</td><td>원래 스토어에만</td><td>같은 생태계 안에서 다시 발생</td></tr>
+            <tr><td>2026년 5월</td><td>캘리포니아 하원이 게임 보호법(AB 1921)을 43대 16으로 통과시켰습니다. 북미에서 이 운동이 거둔 가장 큰 성과 중 하나로, 2027년 회기에 다시 논의됩니다.<sup><a href="#s11">11</a></sup></td></tr>
+            <tr><td>2026년 1월</td><td>Stop Killing Games가 유럽연합 집행위원회에 1,294,188명의 검증된 서명을 제출했습니다. 2024년 미국 유튜버 Ross Scott가 시작한 소비자 운동입니다.<sup><a href="#s10">10</a></sup></td></tr>
+            <tr><td>2025년 1월</td><td>캘리포니아 AB 2426 시행. 디지털 게임을 팔 때 “구매”가 아니라 회수될 수 있는 이용권이라는 사실을 알리도록 의무화했습니다.<sup><a href="#s9">9</a></sup></td></tr>
           </tbody>
         </table>
       </div>
-      <div class="callout"><p>한 번 팔고 끝나는 유통이 아니라, <strong>계정이 주인을 바꿀 때마다 다시 돈이 흐르는 유통</strong>입니다. 기존 스토어에는 없는 자리이고, 이 수익은 생태계를 함께 세운 참여자들이 나눕니다.</p></div>
+      <div class="callout"><p>이 움직임들이 요구하는 것은 하나입니다. <strong>산 것은 사용자의 것이어야 한다</strong>는 것. 레거시 스토어는 이 요구에 온전히 답할 수 없습니다. 계정을 넘기는 기능이 처음부터 구조에 없기 때문입니다. AltsCodex는 바로 그 구조, 기록과 함께 계정이 이관되는 구조 위에 서 있습니다.</p></div>
+      <p class="measure" style="margin:28px 0 0">구조가 다르면 가치의 흐름도 달라집니다. 계정이 주인을 바꿀 때마다 그 가치는 생태계 밖으로 새지 않고 생태계 안에 머물며, 이 길을 함께 세운 참여자들이 나눕니다.</p>
     </div>
   </section>
 
@@ -573,6 +577,9 @@
         <li id="s6"><a href="https://sensortower.com/blog/state-of-mobile-2026?pubDate=20260122" target="_blank" rel="noopener">Sensor Tower, State of Mobile 2026</a></li>
         <li id="s7"><a href="https://9to5mac.com/2026/02/25/app-store-gaming-revenue-hit-52-5b-in-2025-topping-google-play-and-steam-combined-report/" target="_blank" rel="noopener">9to5Mac, Sensor Tower 보고서 인용</a></li>
         <li id="s8"><a href="https://www.notebookcheck.net/Steam-reportedly-generated-11-1-billion-in-gross-revenue-in-the-first-half-of-2026-marking-its-highest-ever-half-year.1338824.0.html" target="_blank" rel="noopener">Notebookcheck, Alinea Analytics 추정 인용</a></li>
+        <li id="s9"><a href="https://www.morganlewis.com/pubs/2024/10/california-becomes-first-state-to-pass-law-targeting-advertising-of-digital-media-licenses" target="_blank" rel="noopener">Morgan Lewis, 캘리포니아 AB 2426</a></li>
+        <li id="s10"><a href="https://www.techspot.com/news/112802-stop-killing-games-lost-biggest-battle-despite-13.html" target="_blank" rel="noopener">TechSpot, Stop Killing Games 유럽 시민 발의</a></li>
+        <li id="s11"><a href="https://kotaku.com/stop-killing-games-bill-passes-california-assembly-scott-ross-2000700893" target="_blank" rel="noopener">Kotaku, 캘리포니아 AB 1921 하원 통과</a> · <a href="https://tech-insider.org/stop-killing-games-california-bill-2026/" target="_blank" rel="noopener">Tech Insider, 2027년 재논의</a></li>
       </ol>
     </div>
   </div>
